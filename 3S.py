@@ -1,4 +1,4 @@
-pip install mysql-connector-python
+pip3 install mysql
 import mysql.connector
 import tkinter as tk
 from tkinter import messagebox
