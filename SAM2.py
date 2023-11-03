@@ -2,28 +2,28 @@ import os
 print("WELCOME TO SIMPLE FILE IMPLEMENTATION")
 print("1-MODIFY FILE AND DIRECTORY\n2-PERFORM OPERATIONS ON FILE")
 mainop=int(input("ENTER OPTION: "))
-ifmainop==1:
+if mainop==1:
 print("FOR MODIFYING FILE AND DIRECTORY, ENTER THE OPTION NUMBER")
 print(" 1-CREATE NEW DIRECTORY\n 2-CHANGE CURRENT WORKING DIRECTORY\n 3-DELETE DIRECTORY \n 4-LIST OUT FILES AND DIRECTORIES\n 5-GET CURRENT WORKING DIRECTORY\n 6-RENAME FILE\n 7-REMOVE FILE\n")
 op=input("DO YOU WANT TO PERFORM ANY OF THE ABOVE OPTIONS?(Y/N) ")
 while op=="Y":
 print("ENTER OPTION")
 ch=int(input())
-ifch==1:
+if ch==1:
 dirname=input("ENTER THE DIRECTORY NAME: ")
 os.makedirs(dirname)
-elifch==2:
+elif ch==2:
 NEWdirname=input("ENTER THE DIRECTORY NAME: ")
 os.chdir(NEWdirname)
-elifch==5:
+elif ch==5:
 print("CURRENT WORKING DIRECTORY IS: ")
 print(os.getcwd())
-elifch==3:
+elif ch==3:
 DELdirname=input("ENTER THE DIRECTORY NAME: ")
 os.rmdir(DELdirname)
-elifch==4:
+elif ch==4:
 print(os.listdir())
-elifch==6:
+elif ch==6:
 oldname=input("ENTER OLD NAME: ")
 nname=input("ENTER NEW NAME: ")
 os.rename(oldname,nname)
